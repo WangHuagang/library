@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/layui.css">
+    <title>图书查询</title>
+</head>
+<body>
+        <form class="layui-form" action="">
+            <div class="layui-container">
+                <div class="layui-row">
+                    <div class="layui-col-md9">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">查找学生</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" autocomplete="off" placeholder="请输入学生姓名/学号" class="layui-input">
+                                </div>
+                            </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <button class="layui-btn layui-bg-green layui-btn-normal layui-btn-radius">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--显示查询结果 -->
+        <table class="layui-table">
+            <!-- <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup> -->
+            <thead>
+              <tr>
+                <th>书名</th>
+                <th>学号</th>
+                <th>借阅者</th>
+                <th>借阅时间</th>
+                <th>归还时间</th>
+                <th>状态</th>
+                
+              </tr> 
+            </thead>
+            <tbody>
+                <!-- 模拟数据 -->
+              <tr>
+                <td>《WEB前端开发技术》</td>
+                <td>201510414218</td>
+                <td>王华港</td>
+                <td>2015-10-22</td>
+                <td>2015-11-06</td>
+                <td>归还</td>
+                
+              </tr>
+            </tbody>
+          </table>
+<script src="../layui.js"></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function () {
+    var element = layui.element;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/layui.css">
+    <title>图书查询</title>
+</head>
+<body>
+        <form class="layui-form" action="">
+            <div class="layui-container">
+                <div class="layui-row">
+                    <div class="layui-col-md9">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">查找学生</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" autocomplete="off" placeholder="请输入学生姓名/学号" class="layui-input">
+                                </div>
+                            </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <button class="layui-btn layui-bg-green layui-btn-normal layui-btn-radius">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--显示查询结果 -->
+        <table class="layui-table">
+            <!-- <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup> -->
+            <thead>
+              <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>年级</th>
+                <th>专业</th>
+                <th>已借图书</th>
+                <th>正借图书</th>
+                <th>操作</th>
+              </tr> 
+            </thead>
+            <tbody>
+                <!-- 模拟数据 -->
+              <tr>
+                <td>201510414218</td>
+                <td>王华港</td>
+                <td>2015</td>
+                <td>软件工程</td>
+                <td>12</td>
+                <td>2</td>
+                <td>
+                        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+                        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" onclick="tip()">删除</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+<script src="../layui.js"></script>
+
+
+<script>
+    function tip() {
+
+
+        
+        layui.use('layer', function () {
+            var layer = layui.layer;
+            layer.confirm('你确定要删除该条记录吗？', {
+                btn: ['确定', '取消']
+            }, function (index, layero) {
+                layer.closeAll();
+                layer.msg('删除成功！')
+            }, function (index) {
+
+            });
+        })
+    }
+    //JavaScript代码区域
+    layui.use('element', function () {
+        var element = layui.element;
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/layui.css">
+    <title>增加图书</title>
+</head>
+<body>
+    <div class="layui-row">
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <label class="layui-form-label">ISBN</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">书名</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">书名</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">出版社</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">作译者</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">内容概要</label>
+                    <div class="layui-input-block">
+                        <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+                    </div>
+                  </div>
+              </form>
+               
+             
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+            <div class="layui-form-item">
+                <label class="layui-form-label">价格</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">复本量</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">库存量</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">上传封面</label>
+                <div class="layui-input-inline">
+                    <input type="file" name="photo" value="" required lay-verify="required" onchange="uploading(this)" autocomplete="off" class="layui-input">
+                  </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">封面图片</label>  
+                <img id="show-img" style="width:100px;height:100px;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit lay-filter="submit">立即提交</button>
+              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+          </div>
+    </div>
+
+      <script src="../layui.js"></script>
+      <script>
+        function uploading(obj) {
+        var file = obj.files[0];
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var img = document.getElementById("show-img");
+            img.src = e.target.result;
+            //或者 img.src = this.result;  //e.target == this
+        }
+        reader.readAsDataURL(file);
+    }
+      //JavaScript代码区域
+      layui.use('element', function(){
+        var element = layui.element;
+        
+      })
+      </script>
+</body>
+</html>
