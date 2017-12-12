@@ -1,0 +1,218 @@
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+*{box-sizing: border-box;}
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    font-size:14px;
+    color:#333;
+}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ul,ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #232323;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+/* 基础样式 */
+.f_l{float: left}
+.f_r{float: right}
+.clc{clear: both}
+.mr_10{margin-right: 10px;}
+
+/* 头部 */
+header{
+    width: 100%;
+    height: 50px;
+    background: #393D49;
+    color: white
+}
+.h_left h2{
+    width: 300px;
+    height: 50px;
+    margin-left: 50px;
+    line-height: 50px;
+}
+.search{
+    width: 500px;
+   margin-top: 7px;
+   margin-left: 100px;
+   position: relative;
+}       
+.search input{
+    width: 400px;
+    margin-right: -7px;
+   
+}
+.show_result{
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    z-index: 9999;
+    background: rgba(255,255,255,0.6);
+    color: black;
+    margin-top: 38px;
+    display: none;
+}
+.show_result ul{
+    margin-top: 10px;
+}
+.show_result ul li a{
+    display: block;
+    padding: 0px 10px;
+    margin-bottom: 8px;
+    font-size: 15px; 
+}
+.show_result ul li a:hover{
+    color: #009688
+}
+.h_right{
+    width: 20%;
+    height: 50px;
+}
+.h_right a{
+    color: white;
+    display: block;
+    height: 100px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.content .bar{
+    width: 100%;
+    height: 40px;
+    background: #eeeeee;
+    border-radius: 5px;
+    line-height: 40px;
+    color:#2F4056;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 20px;
+}
+.banner_img{
+    width: 100%;
+    height: 460px;
+}
+.btn_box{
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+.layui-btn{
+    margin-bottom: 10px;
+}
+.more_btn{
+    width: 400px;
+    height: 200px;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    top: -200px;
+    display: none;
+}
+
+.content .book_list{
+    width: 100%;
+    height:200px; 
+    margin-left: 0px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #cccccc
+}
+.content .book_list ul{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.content .book_list ul li{
+    line-height: 26px;
+    padding-left: 26px;
+    font-size: 16px;
+}
+.content .book_list .book_list_hot li{
+    background: url('../images/hot.png') no-repeat 0 center;
+}
+.content .book_list .book_list_bang li{
+    background: url('../images/bang.png') no-repeat 0 center;
+}
+.content .book_list .book_list_new li{
+    background: url('../images/new.png') no-repeat 0 center;
+}
+
+.title p{
+    width: 140px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    background:rgb(76, 194, 107);
+}
+.show_bookInfo{
+    width: 15%;
+    height: 207px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 1%;
+    
+    
+}
+.show_bookInfo .bookImage {
+    position: relative;
+}
+.show_bookInfo .bookImage img{
+    width: 112px;
+    height: 150px;
+    margin-left: 40px;
+}
+.show_bookInfo .bookTitle{
+    text-align: center;
+    margin-top: 10px;   
+}
+.show_bookInfo:hover .layer_Info{
+    display: block;
+}
+.layer_Info{
+    width: 112px;
+    height: 150px;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0;
+    left: 40px;
+    color: white;
+    display: none;
+}
+.layer_Info p{
+    padding: 30px 10px;
+}
+footer{
+    margin-top: 10px;
+}
+#showInfo p{
+    margin-bottom: 12px;
+}

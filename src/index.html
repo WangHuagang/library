@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>某某图书-首页</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="h_left f_l">
+            <h2>某某图书馆</h2>
+        </div>
+        <div class="search f_l">
+            <form action="">
+                <input type="text" name="title" id='search' lay-verify="required" placeholder="输入书名或ISBN" autocomplete="off" class="layui-input f_l">
+                <button class="layui-btn f_l">
+                    <i class="layui-icon">&#xe615;</i>&nbsp;Search</button>
+            </form>
+            <div class="show_result" id="show_result">
+                <ul>
+                    <!-- 搜索结果的列表项 -->
+                    <li>
+                        <a href="">没有查到该记录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="h_right f_r">
+            <a href="" class="f_r">注册</a>
+            <a href="" class="f_r">登录</a>
+        </div>
+    </header>
+    <!-- header完 -->
+    <div class="layui-carousel" id="banner">
+        <div carousel-item>
+            <div>
+                <img src="images/libary1.jpg" alt="" class="banner_img">
+            </div>
+            <div>
+                <img src="images/libary2.jpg" alt="" class="banner_img">
+            </div>
+            <div>
+                <img src="images/libary3.jpg" alt="" class="banner_img">
+            </div>
+            <div>
+                <img src="images/libary4.jpg" alt="" class="banner_img">
+            </div>
+            <div>
+                <img src="images/libary5.jpg" alt="" class="banner_img">
+            </div>
+        </div>
+    </div>
+    <!-- banner完 -->
+
+    <main>
+        <div class="layui-row">
+            <!-- <div class="layui-col-md2">
+                      <div class="book_type">
+                          <p class="book_type_p">图书分类</p>
+                      </div>
+                    </div> -->
+            <div class="layui-col-md12 btn_box">
+                <button class="layui-btn">马克思主义</button>
+                <button class="layui-btn layui-btn-normal">哲学</button>
+                <button class="layui-btn layui-btn-warm">宗教</button>
+                <button class="layui-btn layui-btn-danger">社会科学</button>
+                <button class="layui-btn layui-btn-danger">政治</button>
+                <button class="layui-btn layui-btn-danger">纪律</button>
+                <button class="layui-btn">军事</button>
+                <button class="layui-btn layui-btn-warm">文字</button>
+                <button class="layui-btn layui-btn-normal">自然科学</button>
+                <button class="layui-btn layui-btn-normal">数学立刻</button>
+                <button class="layui-btn layui-btn-warm">天文学</button>
+                <button class="layui-btn">交通运输</button>
+                <button class="layui-btn  layui-btn-normal" id="more" onclick="show()">more>></button>
+                <div class="more_btn" id="more_btn">
+                    <button class="layui-btn layui-btn-warm">宗教</button>
+                    <button class="layui-btn layui-btn-danger">社会科学</button>
+                    <button class="layui-btn layui-btn-danger">政治</button>
+                    <button class="layui-btn layui-btn-danger">纪律</button>
+                    <button class="layui-btn">军事</button>
+                    <button class="layui-btn layui-btn-warm">宗教</button>
+                    <button class="layui-btn layui-btn-danger">社会科学</button>
+                    <button class="layui-btn layui-btn-danger">政治</button>
+                    <button class="layui-btn layui-btn-danger">纪律</button>
+                    <button class="layui-btn">军事</button>
+                    <button class="layui-btn">马克思主义</button>
+                    <button class="layui-btn layui-btn-normal">哲学</button>
+                    <button class="layui-btn layui-btn-warm">宗教</button>
+                    <button class="layui-btn layui-btn-danger">社会科学</button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space">
+            <div class="layui-col-md4">
+                <div class="content mr_10">
+                    <div class="bar">
+                        <i class="layui-icon">&#xe705;</i> 热搜图书</div>
+                    <div class="book_list">
+                        <ul class="book_list_hot">
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="content mr_10">
+                    <div class="bar">
+                        <i class="layui-icon">&#xe705;</i> 借阅排行榜</div>
+                    <div class="book_list">
+                        <ul class="book_list_bang">
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="content">
+                    <div class="bar">
+                        <i class="layui-icon">&#xe705;</i> 上新图书</div>
+                    <div class="book_list">
+                        <ul class="book_list_new">
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                            <li>
+                                <a href="">这是一本书</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 分类展示完 -->
+        <div class="layui-row">
+            <div class="layui-col-md12">
+                <div class="title">
+                    <p>
+                        <i class="layui-icon">&#xe735;</i>猜你喜欢</p>
+                </div>
+                <div class="show_bookInfo layui-col-md2">
+                    <div class="bookImage">
+                        <img src="images/book.jpg" alt="">
+                        <a href="bookInfo.html">
+                            <div class="layer_Info">
+                                <p>这是书的简介这是书的简介这是书的简介</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bookTitle">
+                        <p>JavaEE高级开发技术</p>
+                        <p>大佬 著</p>
+                    </div>
+
+                </div>
+                <div class="show_bookInfo layui-col-md2">
+                    <div class="bookImage">
+                        <img src="images/book.jpg" alt="">
+                        <a href="bookInfo.html">
+                            <div class="layer_Info">
+                                <p>这是书的简介这是书的简介这是书的简介</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bookTitle">
+                        <p>JavaEE高级开发技术</p>
+                        <p>大佬 著</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>@JavaEE罗廷方、王华港、李星荟 2017 Chengdu University</p>
+    </footer>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="layui.js"></script>
+    <script src="lay/script.js"></script>
+    <script>
+
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+
+        layui.use('carousel', function () {
+            var carousel = layui.carousel;
+            //建造实例
+            carousel.render({
+                elem: '#banner',
+                width: '100%', //设置容器宽度
+                height: '460px',
+                arrow: 'always' //始终显示箭头
+                //,anim: 'updown' //切换动画方式
+            });
+        });
+    </script>
+</body>
+
+</html>

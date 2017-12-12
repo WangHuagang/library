@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>借阅图书</title>
+    <link rel="stylesheet" href="../css/layui.css">
+</head>
+
+<body>
+    <div class="layui-row">
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">ISBN</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">书名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">借阅期限</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="">
+                            <option value="one" checked>一个月</option>
+                            <option value="two">两个月</option>
+                            <option value="three">三个月</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">归还时间</label>
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input" id="backTime">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md4 layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">学号</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">借阅时间</label>
+                <div class="layui-input-block">
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input" id="lendTime">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submit">提交借阅</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../layui.js"></script>
+    <script>
+
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+
+        layui.use('form', function () {
+            var form = layui.form;
+        });
+
+        layui.use('laydate', function () {
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#lendTime'
+            });
+        });
+        layui.use('laydate', function () {
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#backTime'
+            });
+        });
+    </script>
+</body>
+
+</html>

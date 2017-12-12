@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本资料</title>
+    <link rel="stylesheet" href="../css/layui.css">
+    <style>
+      .clc{
+        clear: both;
+      }
+    </style>
+</head>
+<body>
+        <form class="layui-form" action="">
+                <div class="layui-form-item">
+                        <label class="layui-form-label">学号</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="num" lay-verify="required"  autocomplete="off" class="layui-input">                         
+                        </div>
+                      </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">姓名</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="name" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">密码</label>
+                  <div class="layui-input-inline">
+                    <input type="password" name="password" required lay-verify="required"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">性别</label>
+                  <div class="layui-input-block">
+                    <input type="radio" name="sex" value="男" title="男">
+                    <input type="radio" name="sex" value="女" title="女" >
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">邮箱</label>
+                  <div class="layui-input-inline">
+                    <input type="email" name="email" required lay-verify="required"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">手机号</label>
+                  <div class="layui-input-inline">
+                    <input type="tel" name="phone"  required lay-verify="required"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">联系地址</label>
+                  <div class="layui-input-inline">
+                    <input type="tel" name="address"  required lay-verify="required"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">上传头像</label>
+                  <div class="layui-input-inline">
+                    <input type="file" name="photo"  required lay-verify="required" onchange="uploading(this)" autocomplete="off" class="layui-input">
+                  </div>
+                  <div class="clc"></div>
+                  <div class="layui-form-item">
+                      <label class="layui-form-label">预览</label>
+                  <div class="layui-input-inline">
+                    <img id="show-img" style="width:100px;height:100px;">
+                  </div>
+                </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                  <label class="layui-form-label">状态</label>
+                  <div class="layui-input-block">
+                      <input type="checkbox" name="state" lay-skin="switch" lay-text="正常|异常">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">添加学生</button>
+                  </div>
+                </div>
+              </form>
+
+<script src="../layui.js"></script>
+<script>
+    function uploading(obj) {
+        var file = obj.files[0];
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var img = document.getElementById("show-img");
+            img.src = e.target.result;
+            //或者 img.src = this.result;  //e.target == this
+        }
+        reader.readAsDataURL(file);
+    }
+    //JavaScript代码区域
+    layui.use('element', function () {
+        var element = layui.element;
+      
+    });
+    // 用于加载redio等模块
+    layui.use('form', function () {
+            var form = layui.form;
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+});
+</script>
+</body>
+</html>

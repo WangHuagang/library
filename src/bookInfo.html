@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图书详情页</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        footer {
+            width: 100%;
+            height: 30px;
+            color: white;
+            margin-top: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: #393D49;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="h_left f_l">
+            <h2>某某图书馆</h2>
+        </div>
+        <div class="search f_l">
+            <form action="">
+                <input type="text" name="title" id='search' lay-verify="required" placeholder="输入书名或ISBN" autocomplete="off" class="layui-input f_l">
+                <button class="layui-btn f_l">
+                    <i class="layui-icon">&#xe615;</i>&nbsp;Search</button>
+            </form>
+            <div class="show_result" id="show_result">
+                <ul>
+                    <!-- 搜索结果的列表项 -->
+                    <li>
+                        <a href="">没有查到该记录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="h_right f_r">
+            <a href="" class="f_r">注册</a>
+            <a href="" class="f_r">登录</a>
+        </div>
+    </header>
+    <!-- header完 -->
+    <div class="layui-row layui-col-space" style="margin-top:20px;">
+        <div class="layui-col-md4" style="margin:0 30px;">
+            <img src="images/test.jpg" alt="" style="width:150px;height:200px;float:right;">
+        </div>
+        <div class="layui-col-md6" id="showInfo">
+            <p>ISBN：
+                <span>10010</span>
+            </p>
+            <p>书名：
+                <span>《WEB前端开发技术》</span>
+            </p>
+            <p>作者：
+                <span>王华港</span>
+            </p>
+            <p>类型：
+                <span>计算机类</span>
+            </p>
+            <p>价格：
+                <span>58.8</span>
+            </p>
+            <p>藏书量：20</p>
+            <p>剩余量：
+                <span>12</span>
+            </p>
+            <p>出版日期：
+                <span>2017-05-12</span>
+            </p>
+            <p>上架时间：
+                <span>2017-11-11</span>
+            </p>
+            <p>图书简介：
+                <span>这是一本好书，写得非常好的书！！</span>
+            </p>
+            <p>
+                <button class="layui-btn">借阅</button>
+            </p>
+        </div>
+
+    </div>
+    </div>
+    <div class="clc"></div>
+    <footer>
+        <p>@JavaEE罗廷方、王华港、李星荟 2017 Chengdu University</p>
+    </footer>
+    <script src="../layui.js"></script>
+    <script src="lay/script.js"></script>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
+
+</body>
+
+</html>
