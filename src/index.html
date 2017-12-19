@@ -36,66 +36,82 @@
         </div>
     </header>
     <!-- header完 -->
-    <div class="layui-carousel" id="banner">
-        <div carousel-item>
-            <div>
-                <img src="images/libary1.jpg" alt="" class="banner_img">
+    <div class="nav">
+        <div class="nav_btn_l">
+            <div class="type_box f_l">
+                <ul>
+                    <button class="layui-btn">马克思主义</button>
+                    <button class="layui-btn layui-btn-normal">哲学</button>
+                    <button class="layui-btn layui-btn-warm">宗教</button>
+                    <button class="layui-btn layui-btn-danger">社会科学</button>
+                    <button class="layui-btn layui-btn-danger">政治</button>
+                    <button class="layui-btn layui-btn-danger">纪律</button>
+                    <button class="layui-btn">军事</button>
+                    <button class="layui-btn layui-btn-warm">文字</button>
+                    <button class="layui-btn layui-btn-normal">自然科学</button>
+                    <button class="layui-btn layui-btn-normal">数学立刻</button>
+                    <button class="layui-btn layui-btn-warm">天文学</button>
+                    <button class="layui-btn">交通运输</button>
+
+                </ul>
             </div>
-            <div>
-                <img src="images/libary2.jpg" alt="" class="banner_img">
+
+        </div>
+
+        <div class="layui-carousel" id="banner">
+
+            <div carousel-item>
+                <div>
+                    <img src="images/libary1.jpg" alt="" class="banner_img">
+                </div>
+                <div>
+                    <img src="images/libary2.jpg" alt="" class="banner_img">
+                </div>
+                <div>
+                    <img src="images/libary3.jpg" alt="" class="banner_img">
+                </div>
+                <div>
+                    <img src="images/libary4.jpg" alt="" class="banner_img">
+                </div>
+                <div>
+                    <img src="images/libary5.jpg" alt="" class="banner_img">
+                </div>
             </div>
-            <div>
-                <img src="images/libary3.jpg" alt="" class="banner_img">
-            </div>
-            <div>
-                <img src="images/libary4.jpg" alt="" class="banner_img">
-            </div>
-            <div>
-                <img src="images/libary5.jpg" alt="" class="banner_img">
-            </div>
+        </div>
+        <div class="nav_btn_r">
+            <ul>
+                <div class="content">
+                    <div class="bar">
+                        <i class="layui-icon">&#xe63c;</i> 通知公告</div>
+                    <div class="book_list">
+                        <ul class="book_list_new">
+                            <li>
+                                <a href="">这是一条公告</a>
+                            </li>
+                            <li>
+                                <a href="">这是一条公告</a>
+                            </li>
+                            <li>
+                                <a href="">这是一条公告</a>
+                            </li>
+                            <li>
+                                <a href="">这是一条公告</a>
+                            </li>
+                            <li>
+                                <a href="">这是一条公告</a>
+                            </li>
+                            <li>
+                                <a href="">这是一条公告</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
         </div>
     </div>
     <!-- banner完 -->
 
     <main>
-        <div class="layui-row">
-            <!-- <div class="layui-col-md2">
-                      <div class="book_type">
-                          <p class="book_type_p">图书分类</p>
-                      </div>
-                    </div> -->
-            <div class="layui-col-md12 btn_box">
-                <button class="layui-btn">马克思主义</button>
-                <button class="layui-btn layui-btn-normal">哲学</button>
-                <button class="layui-btn layui-btn-warm">宗教</button>
-                <button class="layui-btn layui-btn-danger">社会科学</button>
-                <button class="layui-btn layui-btn-danger">政治</button>
-                <button class="layui-btn layui-btn-danger">纪律</button>
-                <button class="layui-btn">军事</button>
-                <button class="layui-btn layui-btn-warm">文字</button>
-                <button class="layui-btn layui-btn-normal">自然科学</button>
-                <button class="layui-btn layui-btn-normal">数学立刻</button>
-                <button class="layui-btn layui-btn-warm">天文学</button>
-                <button class="layui-btn">交通运输</button>
-                <button class="layui-btn  layui-btn-normal" id="more" onclick="show()">more>></button>
-                <div class="more_btn" id="more_btn">
-                    <button class="layui-btn layui-btn-warm">宗教</button>
-                    <button class="layui-btn layui-btn-danger">社会科学</button>
-                    <button class="layui-btn layui-btn-danger">政治</button>
-                    <button class="layui-btn layui-btn-danger">纪律</button>
-                    <button class="layui-btn">军事</button>
-                    <button class="layui-btn layui-btn-warm">宗教</button>
-                    <button class="layui-btn layui-btn-danger">社会科学</button>
-                    <button class="layui-btn layui-btn-danger">政治</button>
-                    <button class="layui-btn layui-btn-danger">纪律</button>
-                    <button class="layui-btn">军事</button>
-                    <button class="layui-btn">马克思主义</button>
-                    <button class="layui-btn layui-btn-normal">哲学</button>
-                    <button class="layui-btn layui-btn-warm">宗教</button>
-                    <button class="layui-btn layui-btn-danger">社会科学</button>
-                </div>
-            </div>
-        </div>
         <div class="layui-row layui-col-space">
             <div class="layui-col-md4">
                 <div class="content mr_10">
@@ -103,12 +119,6 @@
                         <i class="layui-icon">&#xe705;</i> 热搜图书</div>
                     <div class="book_list">
                         <ul class="book_list_hot">
-                            <li>
-                                <a href="">这是一本书</a>
-                            </li>
-                            <li>
-                                <a href="">这是一本书</a>
-                            </li>
                             <li>
                                 <a href="">这是一本书</a>
                             </li>
@@ -230,8 +240,8 @@
             //建造实例
             carousel.render({
                 elem: '#banner',
-                width: '100%', //设置容器宽度
-                height: '460px',
+                width: '60%', //设置容器宽度
+                height: '360px',
                 arrow: 'always' //始终显示箭头
                 //,anim: 'updown' //切换动画方式
             });
